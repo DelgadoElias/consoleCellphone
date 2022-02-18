@@ -43,9 +43,8 @@ public class App {
 
         // Principal Code
 
-
         // If is 4 character key in cellphone
-        if( longDecisions.indexOf(actualCharacter) > 0 ){ // is (char in 9 or 7 keys) ? true : false
+        if( longDecisions.indexOf(actualCharacter) >= 0 ){ // is (char in 9 or 7 keys) ? true : false
 
             int isNineOrSeven = longDecisions.indexOf(actualCharacter);
             if(isNineOrSeven < 4) {
