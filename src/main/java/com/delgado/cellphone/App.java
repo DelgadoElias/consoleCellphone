@@ -4,7 +4,7 @@ import java.util.*;
 
 /**
  * Cellphone console App
- * @author Delgado Elias
+ * @author Delgado Elias -
  *
  */
 public class App {
