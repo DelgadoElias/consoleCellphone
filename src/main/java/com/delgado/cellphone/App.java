@@ -33,8 +33,8 @@ public class App {
 
         final String longDecisions = "pqrswxyz";
         final String shortDecisions = " tuv";
-        String result;
         int isTwoToSix = 2;
+        String result;
 
 
         // * - Principal statements - If the character not belongs to number but are in the cellphone keyboard
@@ -68,17 +68,17 @@ public class App {
 
                 int autoIncrement = 0; // To know if it has one or more iterations
                 for (int i = 97; i < 112; i++){ // java uses UNICODE for char. Ex: 97 is 'a', 98 = 'b', etc.. 'i' uses UNICODE too.
-                    char uniCharacter = (char) i;
+                    char uniCharacter = (char) i; // Using UNICODE id for new character
 
                     if(actualCharacter == uniCharacter) {
                         for(int j = 0; j < autoIncrement + 1; j++) {
                             result = result + isTwoToSix;
                         }
-                        break;
-
+                        break; // I found it! Stop!
                     } else{
                         autoIncrement = autoIncrement + 1;
                     }
+
                     if (autoIncrement == 3) {
                         autoIncrement = 0;
                         isTwoToSix = isTwoToSix + 1;
@@ -91,14 +91,25 @@ public class App {
             // if the lastCharacter is the same to the first of the result. Need a space
             if(lastCharacter == result.toCharArray()[0]) {
                 return " " + result;
-        }
+            }
             else {
                 return result;
             }
     }
 
+
+    /**
+     * StringtoCellphone
+     * @param word {String} - The word to convert to cellphone keycode
+     * @return {String} - The word converted to keyboard character by character
+     */
     public static String stringToCellphone(String word){
         
+        /**
+         * stringToCellphone Variables
+         * toCharacters[] {char[]} - Word param converted in a char array.
+         * finalResult {String} - The variable to return
+         */
         char toCharacters[] = word.toCharArray();
         String finalResult = "";
 

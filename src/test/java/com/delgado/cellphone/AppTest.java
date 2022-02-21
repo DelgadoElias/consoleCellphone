@@ -89,7 +89,7 @@ public class AppTest
 
         String finalResult = App.stringToCellphone(helloWorldString);
 
-        assertEquals("Hello world must return with uppercases |4433555 5556660 0096667775553", "4433555 5556660 0096667775553", finalResult);
+        assertEquals("Hello world must return with uppercases and symbols |4433555 5556660 0096667775553", "4433555 5556660 0096667775553", finalResult);
 
     }
 }
